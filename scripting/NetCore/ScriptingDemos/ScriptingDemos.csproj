@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <LangVersion>latest</LangVersion>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <AssemblyName>ScriptingDemos</AssemblyName>
+    <RootNamespace>ScriptingDemos</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="microsoft.codeanalysis.csharp.scripting" Version="2.10.0" />
+    <PackageReference Include="System.Runtime.Serialization.Primitives" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Fixtures\config.csx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\test1.csx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Fixtures\test2.csx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
