@@ -6,17 +6,26 @@ namespace CSharpCompiler.Demos.InvalidProgram
     {
         static void Main(string[] args)
         {
-            var xmas = new Christmas();
+            var defaultLeaf = Leaf.Default;
+            var tree = new Tree();
         }
     }
 
 
-    struct Gift<T>
+    // type definition is recursive but the struct layout is not - the field is static
+    // reason for the failure is that both the instance and static layout are done together
+    struct Leaf
+    {
+        public static readonly Leaf? Default = null;
+    }
+
+    // legal type topology in C#
+    struct Node<T>
     {
     }
 
-    struct Christmas
+    struct Tree
     {
-        public Gift<Christmas> WrappedGift { get; set; }
+        public Node<Tree> Node { get; set; }
     }
 }

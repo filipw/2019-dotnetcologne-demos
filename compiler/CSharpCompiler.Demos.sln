@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpCompiler.Demos.Invali
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpCompiler.Demos.OpenGeneric", "src\CSharpCompiler.Demos.OpenGeneric\CSharpCompiler.Demos.OpenGeneric.csproj", "{45196516-E726-400F-8838-A37D947FA1D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CsharpCompiler.Demos.MemberOverrides", "src\CsharpCompiler.Demos.MemberOverrides\CsharpCompiler.Demos.MemberOverrides.csproj", "{A0BD582A-5CBA-4C40-B7BA-DAAD7A63C939}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpCompiler.Demos.MemberOverrides", "src\CSharpCompiler.Demos.MemberOverrides\CSharpCompiler.Demos.MemberOverrides.csproj", "{A0BD582A-5CBA-4C40-B7BA-DAAD7A63C939}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gift", "src\Gift\Gift.csproj", "{0DFED68F-299D-4CF1-BDA1-C4A827F17BB0}"
 EndProject

@@ -25,11 +25,11 @@ namespace Compiler
                 WithMetadataImportOptions(MetadataImportOptions.All);
 
             var topLevelBinderFlagsProperty = typeof(CSharpCompilationOptions).GetProperty("TopLevelBinderFlags", BindingFlags.Instance | BindingFlags.NonPublic);
-            topLevelBinderFlagsProperty.SetValue(compilationOptions, (uint)1 << 22);
+            topLevelBinderFlagsProperty.SetValue(compilationOptions, (uint)1 << 22 | (uint)1 << 10);
 
             var code = File.ReadAllText(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..", "CrazyProgram", "Program.cs"));
             var compilation = CSharpCompilation.Create("DynamicCrazyProgram", new[] {
-                CSharpSyntaxTree.ParseText(code) }, metadataReferences, compilationOptions);
+                CSharpSyntaxTree.ParseText(code, CSharpParseOptions.Default.WithLanguageVersion(LanguageVersion.Latest)) }, metadataReferences, compilationOptions);
 
             using (var ms = new MemoryStream())
             {
