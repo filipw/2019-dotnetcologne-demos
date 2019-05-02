@@ -7,7 +7,7 @@ using Newtonsoft.Json;
 var repoNames = new[]
 {
     "omnisharp/omnisharp-roslyn"
-};
+}; 
 
 var outputFileName = "ReleaseNotes.md";
 

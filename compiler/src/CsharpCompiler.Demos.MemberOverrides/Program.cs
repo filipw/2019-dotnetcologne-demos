@@ -9,7 +9,6 @@ namespace CsharpCompiler.Demos.MemberOverrides
         {
             var gift = new ToyGift();
             Console.WriteLine(gift.GetDescription());
-            Console.ReadLine();
         }
     }
 }
