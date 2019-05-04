@@ -6,8 +6,6 @@ namespace CSharpCompiler.Demos.InvalidProgram
     {
         static void Main(string[] args)
         {
-            var defaultLeaf = Leaf.Default;
-            var tree = new Tree();
         }
     }
 
@@ -16,16 +14,17 @@ namespace CSharpCompiler.Demos.InvalidProgram
     // reason for the failure is that both the instance and static layout are done together
     struct Leaf
     {
-        public static readonly Leaf? Default = null;
+        public Leaf Foo;
+        //public static readonly Leaf? Default = null;
     }
 
     // legal type topology in C#
-    struct Node<T>
+    struct Leaf<T>
     {
     }
 
     struct Tree
     {
-        public Node<Tree> Node { get; set; }
+        public Leaf<Tree> Leaf { get; set; }
     }
 }
