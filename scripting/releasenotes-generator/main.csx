@@ -40,6 +40,7 @@ try
             WriteToFile(writer, closedIssues);
         }
     }
+
     Console.WriteLine("Release notes successfully generated.");
 }
 catch (Exception e)
