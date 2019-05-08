@@ -24,7 +24,7 @@ namespace CSharpCompiler.Demos.InvalidProgram
 
     struct Tree
     {
-        public Leaf<Tree> Leaf { get; set; }
+        public Leaf<Tree> Leaf;
     }
 }
 
